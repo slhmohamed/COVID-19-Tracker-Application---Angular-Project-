@@ -55,7 +55,10 @@ export class AppComponent {
   fetchCountries() {
     this.api.fetchCountries().subscribe((res: any[]) => {
       var countries = res['countries'];
+      
+      
       this.countries = countries.map((name) => name['name']);
+      console.log(this.countries);
     });
   }
 
